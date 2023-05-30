@@ -1,4 +1,4 @@
-const destinationData = [
+module.exports = [
 	{
 		path: "/destinations/amsterdam-netherlands.jpg",
 		country: "Netherlands",
@@ -60,4 +60,4 @@ const destinationData = [
 		city: "Seoul",
 	},
 ];
-export default destinationData;
+

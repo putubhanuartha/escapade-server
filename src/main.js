@@ -4,6 +4,7 @@ const app = express()
 const port = 3000
 const flightsData = require('./model/flightsData.js');
 const hotelsData = require('./model/hotelsData.js');
+const citiesData = require('./model/destinationData.js');
 app.use(cors())
 
 app.get('/', (req, res) => {
@@ -19,6 +20,11 @@ app.get('/flight', (req, res) => {
   app.get('/hotels', (req, res) => {
     const { destination, from_date, to_date, adult, child, baby, keyword } = req.query;
     res.send(hotelsData)
+  })
+
+  app.get('/city',(req,res) => {
+    const {destination} = req.query;
+    res.send(citiesData)
   })
   
 
